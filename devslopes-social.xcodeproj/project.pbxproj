@@ -12,6 +12,8 @@
 		BC39A5551EE4B75800E1B574 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC39A5541EE4B75800E1B574 /* Constants.swift */; };
 		BC39A5571EE4B9AB00E1B574 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC39A5561EE4B9AB00E1B574 /* RoundButton.swift */; };
 		BCE081ED1EE503A1005E446F /* feedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE081EC1EE503A1005E446F /* feedVC.swift */; };
+		BCE081EF1EE525F0005E446F /* circleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE081EE1EE525F0005E446F /* circleView.swift */; };
+		BCE081F31EE53F4F005E446F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE081F21EE53F4F005E446F /* PostCell.swift */; };
 		BCE489F61EE39DE000380D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE489F51EE39DE000380D67 /* AppDelegate.swift */; };
 		BCE489F81EE39DE000380D67 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE489F71EE39DE000380D67 /* SignInVC.swift */; };
 		BCE489FB1EE39DE000380D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE489F91EE39DE000380D67 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		BC39A5541EE4B75800E1B574 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BC39A5561EE4B9AB00E1B574 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		BCE081EC1EE503A1005E446F /* feedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedVC.swift; sourceTree = "<group>"; };
+		BCE081EE1EE525F0005E446F /* circleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circleView.swift; sourceTree = "<group>"; };
+		BCE081F21EE53F4F005E446F /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		BCE489F21EE39DE000380D67 /* devslopes-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "devslopes-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE489F51EE39DE000380D67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE489F71EE39DE000380D67 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			children = (
 				BC39A54F1EE4B61300E1B574 /* FancyView.swift */,
 				BC39A5561EE4B9AB00E1B574 /* RoundButton.swift */,
+				BCE081EE1EE525F0005E446F /* circleView.swift */,
+				BCE081F21EE53F4F005E446F /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -496,10 +502,12 @@
 			files = (
 				BCE081ED1EE503A1005E446F /* feedVC.swift in Sources */,
 				BCE489F81EE39DE000380D67 /* SignInVC.swift in Sources */,
+				BCE081EF1EE525F0005E446F /* circleView.swift in Sources */,
 				BC39A5571EE4B9AB00E1B574 /* RoundButton.swift in Sources */,
 				BCE489F61EE39DE000380D67 /* AppDelegate.swift in Sources */,
 				BC39A5501EE4B61300E1B574 /* FancyView.swift in Sources */,
 				BC39A5551EE4B75800E1B574 /* Constants.swift in Sources */,
+				BCE081F31EE53F4F005E446F /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
