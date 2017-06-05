@@ -11,6 +11,7 @@
 		BC39A5501EE4B61300E1B574 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC39A54F1EE4B61300E1B574 /* FancyView.swift */; };
 		BC39A5551EE4B75800E1B574 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC39A5541EE4B75800E1B574 /* Constants.swift */; };
 		BC39A5571EE4B9AB00E1B574 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC39A5561EE4B9AB00E1B574 /* RoundButton.swift */; };
+		BCE081ED1EE503A1005E446F /* feedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE081EC1EE503A1005E446F /* feedVC.swift */; };
 		BCE489F61EE39DE000380D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE489F51EE39DE000380D67 /* AppDelegate.swift */; };
 		BCE489F81EE39DE000380D67 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE489F71EE39DE000380D67 /* SignInVC.swift */; };
 		BCE489FB1EE39DE000380D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE489F91EE39DE000380D67 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		BC39A54F1EE4B61300E1B574 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		BC39A5541EE4B75800E1B574 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BC39A5561EE4B9AB00E1B574 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		BCE081EC1EE503A1005E446F /* feedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedVC.swift; sourceTree = "<group>"; };
 		BCE489F21EE39DE000380D67 /* devslopes-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "devslopes-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE489F51EE39DE000380D67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE489F71EE39DE000380D67 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE489F71EE39DE000380D67 /* SignInVC.swift */,
+				BCE081EC1EE503A1005E446F /* feedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE081ED1EE503A1005E446F /* feedVC.swift in Sources */,
 				BCE489F81EE39DE000380D67 /* SignInVC.swift in Sources */,
 				BC39A5571EE4B9AB00E1B574 /* RoundButton.swift in Sources */,
 				BCE489F61EE39DE000380D67 /* AppDelegate.swift in Sources */,

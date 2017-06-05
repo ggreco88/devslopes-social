@@ -11,6 +11,7 @@ import FBSDKCoreKit
 import Firebase
 import FBSDKLoginKit
 import FirebaseAuth
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -19,13 +20,15 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+   
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
 
     @IBAction func facebookBtnTapped(_ sender: Any) {
@@ -42,6 +45,7 @@ class SignInVC: UIViewController {
                 print("Guillermo: Successfully authenticated with facebook")
                 let crededntial = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(crededntial)
+                self.performSegue(withIdentifier: "goToFeed", sender: nil)
             }
         }
         
@@ -54,6 +58,9 @@ class SignInVC: UIViewController {
             }
             else {
                 print("Guillermo: Successfully authenticated to Firebase")
+                self.completeSignIn(id: (user?.uid)!)
+                
+                
             }
         }
     }
@@ -64,6 +71,7 @@ class SignInVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil{
                     print("Guillermo: User successfully authenticated with firebase via email sign in")
+                    self.completeSignIn(id: (user?.uid)!)
                     
                 }
                 else{
@@ -72,15 +80,25 @@ class SignInVC: UIViewController {
                             print("Guillermo: Unable to authenticate with Firebase using email")
                         } else{
                             print("Guillermo: Successfully authenticated via to firebase via email")
+                            self.completeSignIn(id: (user?.uid)!)
                         }
                     })
                 }
             })
         }
+    
         
         
     }
+    
+    func completeSignIn(id: String){
+        
+        let keychainResult = KeychainWrapper.standard.set( id, forKey: KEY_UID)
+        print("Guillermo: Data saved to the keychain \(keychainResult)")
+        self.performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+}
 
     
-}
+
 

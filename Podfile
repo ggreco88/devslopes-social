@@ -11,6 +11,7 @@ target 'devslopes-social' do
   pod ‘Firebase/Database’
   pod ‘Firebase/Storage’
   pod 'FBSDKLoginKit'
+  pod 'SwiftKeychainWrapper'
 
   target 'devslopes-socialTests' do
     inherit! :search_paths
