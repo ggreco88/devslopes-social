@@ -58,7 +58,11 @@ class SignInVC: UIViewController {
             }
             else {
                 print("Guillermo: Successfully authenticated to Firebase")
-                self.completeSignIn(id: (user?.uid)!)
+                
+                if let user = user{
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
+                }
                 
                 
             }
@@ -70,8 +74,11 @@ class SignInVC: UIViewController {
             
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil{
-                    print("Guillermo: User successfully authenticated with firebase via email sign in")
-                    self.completeSignIn(id: (user?.uid)!)
+                    print("Guillermo: Email user authenticated with firebase via email sign in")
+                    if let user = user{
+                        let userData = ["provider": user.providerID]
+                       self.completeSignIn(id: user.uid, userData: userData)
+                    }
                     
                 }
                 else{
@@ -79,8 +86,12 @@ class SignInVC: UIViewController {
                         if error != nil{
                             print("Guillermo: Unable to authenticate with Firebase using email")
                         } else{
-                            print("Guillermo: Successfully authenticated via to firebase via email")
-                            self.completeSignIn(id: (user?.uid)!)
+                            print("Guillermo: Successfully authenticated to firebase via email")
+                            if let user = user{
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
+                            }
+                            
                         }
                     })
                 }
@@ -91,11 +102,12 @@ class SignInVC: UIViewController {
         
     }
     
-    func completeSignIn(id: String){
-        
+    func completeSignIn(id: String, userData: Dictionary<String, String>){
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData )
         let keychainResult = KeychainWrapper.standard.set( id, forKey: KEY_UID)
         print("Guillermo: Data saved to the keychain \(keychainResult)")
         self.performSegue(withIdentifier: "goToFeed", sender: nil)
+        
         }
 }
 
